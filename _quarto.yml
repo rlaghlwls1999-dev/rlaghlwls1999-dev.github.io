@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Everything"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: papers/index.qmd
+        text: Papers
+      - href: notes/index.qmd
+        text: Study Notes
+  search: true
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    html-math-method: katex
+
+bibliography: references.bib
