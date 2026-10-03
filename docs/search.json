@@ -2,56 +2,56 @@
   {
     "objectID": "notes/Stochastic_calculus.html",
     "href": "notes/Stochastic_calculus.html",
-    "title": "함수해석학: Hahn-Banach 정리",
+    "title": "Gaussian processes and spaces",
     "section": "",
-    "text": "노름 공간에서 부분공간 위에 정의된 선형 범함수를 전체 공간으로 확장하는 문제."
+    "text": "앞으로 정리할 내용 중에 지금 수업을 듣고 있는 Stochastic calculus 내용을 포스팅 할 예정이다. 밑의 내용은 AI가 아무거나 만들어줘서 그런지 Hahn-Banach theorem에 대해 적어주었는데 빠른 시일내에 바꿀 예정이다."
   },
   {
     "objectID": "notes/Stochastic_calculus.html#배경",
     "href": "notes/Stochastic_calculus.html#배경",
-    "title": "함수해석학: Hahn-Banach 정리",
+    "title": "Gaussian processes and spaces",
     "section": "",
-    "text": "노름 공간에서 부분공간 위에 정의된 선형 범함수를 전체 공간으로 확장하는 문제."
+    "text": "앞으로 정리할 내용 중에 지금 수업을 듣고 있는 Stochastic calculus 내용을 포스팅 할 예정이다. 밑의 내용은 AI가 아무거나 만들어줘서 그런지 Hahn-Banach theorem에 대해 적어주었는데 빠른 시일내에 바꿀 예정이다."
   },
   {
     "objectID": "notes/Stochastic_calculus.html#정의",
     "href": "notes/Stochastic_calculus.html#정의",
-    "title": "함수해석학: Hahn-Banach 정리",
+    "title": "Gaussian processes and spaces",
     "section": "정의",
     "text": "정의\n\nDefinition 1 p: X \\to \\mathbb{R}이 준선형(sublinear) 이라 함은 p(x+y) \\leq p(x)+p(y)이고 p(\\alpha x) = \\alpha p(x) (\\alpha \\geq 0)인 것이다."
   },
   {
     "objectID": "notes/Stochastic_calculus.html#정리",
     "href": "notes/Stochastic_calculus.html#정리",
-    "title": "함수해석학: Hahn-Banach 정리",
+    "title": "Gaussian processes and spaces",
     "section": "정리",
     "text": "정리\n\nTheorem 1 X를 \\mathbb{R}-벡터공간, p: X \\to \\mathbb{R}을 준선형, M \\subset X를 부분공간, f: M \\to \\mathbb{R}을 선형이라 하자. f \\leq p on M이면, F|_M = f이고 F \\leq p on X인 선형 F: X \\to \\mathbb{R}이 존재한다."
   },
   {
     "objectID": "notes/Stochastic_calculus.html#증명",
     "href": "notes/Stochastic_calculus.html#증명",
-    "title": "함수해석학: Hahn-Banach 정리",
+    "title": "Gaussian processes and spaces",
     "section": "증명",
     "text": "증명\n\nProof. Step 1. 한 차원씩 확장. M \\oplus \\mathbb{R}x_0 위에서 F(x + t x_0) = f(x) + t\\alpha로 정의. \\alpha를 적절히 선택하면 F \\leq p 유지됨.\nStep 2. Zorn의 보조정리를 적용하여 극대 확장 존재."
   },
   {
     "objectID": "notes/Stochastic_calculus.html#응용",
     "href": "notes/Stochastic_calculus.html#응용",
-    "title": "함수해석학: Hahn-Banach 정리",
+    "title": "Gaussian processes and spaces",
     "section": "응용",
     "text": "응용\n\n노름 보존 확장\n쌍대공간의 존재성\n분리 정리 (separation theorem)"
   },
   {
     "objectID": "notes/Stochastic_calculus.html#헷갈린-점",
     "href": "notes/Stochastic_calculus.html#헷갈린-점",
-    "title": "함수해석학: Hahn-Banach 정리",
+    "title": "Gaussian processes and spaces",
     "section": "헷갈린 점",
     "text": "헷갈린 점\n\np가 준선형이 아니라 노름일 때: |f| \\leq p\n복소수 버전은 별도 정리"
   },
   {
     "objectID": "notes/Stochastic_calculus.html#참고문헌",
     "href": "notes/Stochastic_calculus.html#참고문헌",
-    "title": "함수해석학: Hahn-Banach 정리",
+    "title": "Gaussian processes and spaces",
     "section": "참고문헌",
     "text": "참고문헌\n\nRudin, Functional Analysis, Ch. 3\nBrezis, Functional Analysis, Ch. 1"
   },
@@ -81,7 +81,7 @@
     "href": "notes/index.html",
     "title": "Study Notes",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n함수해석학: Hahn-Banach 정리\n\n\n\n함수해석학\n\n\n\n\n\n\n\n\n\nOct 3, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nGaussian processes and spaces\n\n\n\nStochastic Calculus\n\n\n\n\n\n\n\n\n\nOct 3, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/index.html",

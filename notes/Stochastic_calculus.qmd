@@ -1,14 +1,14 @@
 ---
-title: "함수해석학: Hahn-Banach 정리"
+title: "Gaussian processes and spaces"
 date: 2026-10-03
-categories: [함수해석학]
-tags: [Hahn-Banach, extension, functional]
+categories: [Stochastic Calculus]
+tags: [Gaussian processes, Gaussian spaces]
 ---
 
 ## 배경
 
-노름 공간에서 부분공간 위에 정의된 선형 범함수를
-전체 공간으로 확장하는 문제.
+앞으로 정리할 내용 중에 지금 수업을 듣고 있는 Stochastic calculus 내용을 포스팅 할 예정이다.
+밑의 내용은 AI가 아무거나 만들어줘서 그런지 Hahn-Banach theorem에 대해 적어주었는데 빠른 시일내에 바꿀 예정이다.
 
 ## 정의
 
