@@ -1,0 +1,53 @@
+---
+title: "함수해석학: Hahn-Banach 정리"
+date: 2026-10-03
+categories: [함수해석학]
+tags: [Hahn-Banach, extension, functional]
+---
+
+## 배경
+
+노름 공간에서 부분공간 위에 정의된 선형 범함수를
+전체 공간으로 확장하는 문제.
+
+## 정의
+
+::: {#def-sublinear}
+$p: X \to \mathbb{R}$이 **준선형(sublinear)** 이라 함은
+$p(x+y) \leq p(x)+p(y)$이고 $p(\alpha x) = \alpha p(x)$ ($\alpha \geq 0$)인 것이다.
+:::
+
+## 정리
+
+::: {#thm-hahn-banach}
+$X$를 $\mathbb{R}$-벡터공간, $p: X \to \mathbb{R}$을 준선형,
+$M \subset X$를 부분공간, $f: M \to \mathbb{R}$을 선형이라 하자.
+$f \leq p$ on $M$이면, $F|_M = f$이고 $F \leq p$ on $X$인
+선형 $F: X \to \mathbb{R}$이 존재한다.
+:::
+
+## 증명
+
+::: {.proof}
+**Step 1.** 한 차원씩 확장.
+$M \oplus \mathbb{R}x_0$ 위에서 $F(x + t x_0) = f(x) + t\alpha$로 정의.
+$\alpha$를 적절히 선택하면 $F \leq p$ 유지됨.
+
+**Step 2.** Zorn의 보조정리를 적용하여 극대 확장 존재.
+:::
+
+## 응용
+
+- 노름 보존 확장
+- 쌍대공간의 존재성
+- 분리 정리 (separation theorem)
+
+## 헷갈린 점
+
+- $p$가 준선형이 아니라 노름일 때: $|f| \leq p$
+- 복소수 버전은 별도 정리
+
+## 참고문헌
+
+- Rudin, *Functional Analysis*, Ch. 3
+- Brezis, *Functional Analysis*, Ch. 1

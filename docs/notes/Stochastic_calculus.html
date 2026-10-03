@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-10-03">
 
-<title>Study Notes – Everything</title>
+<title>함수해석학: Hahn-Banach 정리 – Everything</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,6 +75,49 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -103,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../notes/index.html" aria-current="page"> 
+    <a class="nav-link" href="../notes/index.html"> 
 <span class="menu-text">Study Notes</span></a>
   </li>  
 </ul>
@@ -122,7 +166,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#공부-노트" id="toc-공부-노트" class="nav-link active" data-scroll-target="#공부-노트">공부 노트</a></li>
+  <li><a href="#배경" id="toc-배경" class="nav-link active" data-scroll-target="#배경">배경</a></li>
+  <li><a href="#정의" id="toc-정의" class="nav-link" data-scroll-target="#정의">정의</a></li>
+  <li><a href="#정리" id="toc-정리" class="nav-link" data-scroll-target="#정리">정리</a></li>
+  <li><a href="#증명" id="toc-증명" class="nav-link" data-scroll-target="#증명">증명</a></li>
+  <li><a href="#응용" id="toc-응용" class="nav-link" data-scroll-target="#응용">응용</a></li>
+  <li><a href="#헷갈린-점" id="toc-헷갈린-점" class="nav-link" data-scroll-target="#헷갈린-점">헷갈린 점</a></li>
+  <li><a href="#참고문헌" id="toc-참고문헌" class="nav-link" data-scroll-target="#참고문헌">참고문헌</a></li>
   </ul>
 </nav>
     </div>
@@ -131,14 +181,23 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Study Notes</h1>
-</div>
+<h1 class="title">함수해석학: Hahn-Banach 정리</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">함수해석학</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 3, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -148,10 +207,49 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="공부-노트" class="level1">
-<h1>공부 노트</h1>
+<section id="배경" class="level2">
+<h2 class="anchored" data-anchor-id="배경">배경</h2>
+<p>노름 공간에서 부분공간 위에 정의된 선형 범함수를 전체 공간으로 확장하는 문제.</p>
+</section>
+<section id="정의" class="level2">
+<h2 class="anchored" data-anchor-id="정의">정의</h2>
+<div id="def-sublinear" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1</strong></span> <span class="math inline">p: X \to \mathbb{R}</span>이 <strong>준선형(sublinear)</strong> 이라 함은 <span class="math inline">p(x+y) \leq p(x)+p(y)</span>이고 <span class="math inline">p(\alpha x) = \alpha p(x)</span> (<span class="math inline">\alpha \geq 0</span>)인 것이다.</p>
+</div>
+</section>
+<section id="정리" class="level2">
+<h2 class="anchored" data-anchor-id="정리">정리</h2>
+<div id="thm-hahn-banach" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1</strong></span> <span class="math inline">X</span>를 <span class="math inline">\mathbb{R}</span>-벡터공간, <span class="math inline">p: X \to \mathbb{R}</span>을 준선형, <span class="math inline">M \subset X</span>를 부분공간, <span class="math inline">f: M \to \mathbb{R}</span>을 선형이라 하자. <span class="math inline">f \leq p</span> on <span class="math inline">M</span>이면, <span class="math inline">F|_M = f</span>이고 <span class="math inline">F \leq p</span> on <span class="math inline">X</span>인 선형 <span class="math inline">F: X \to \mathbb{R}</span>이 존재한다.</p>
+</div>
+</section>
+<section id="증명" class="level2">
+<h2 class="anchored" data-anchor-id="증명">증명</h2>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span><strong>Step 1.</strong> 한 차원씩 확장. <span class="math inline">M \oplus \mathbb{R}x_0</span> 위에서 <span class="math inline">F(x + t x_0) = f(x) + t\alpha</span>로 정의. <span class="math inline">\alpha</span>를 적절히 선택하면 <span class="math inline">F \leq p</span> 유지됨.</p>
+<p><strong>Step 2.</strong> Zorn의 보조정리를 적용하여 극대 확장 존재.</p>
+</div>
+</section>
+<section id="응용" class="level2">
+<h2 class="anchored" data-anchor-id="응용">응용</h2>
 <ul>
-<li><a href="../notes/Stochastic_calculus.html">Stochastic Calculus : Gaussian Processes and Spaces</a></li>
+<li>노름 보존 확장</li>
+<li>쌍대공간의 존재성</li>
+<li>분리 정리 (separation theorem)</li>
+</ul>
+</section>
+<section id="헷갈린-점" class="level2">
+<h2 class="anchored" data-anchor-id="헷갈린-점">헷갈린 점</h2>
+<ul>
+<li><span class="math inline">p</span>가 준선형이 아니라 노름일 때: <span class="math inline">|f| \leq p</span></li>
+<li>복소수 버전은 별도 정리</li>
+</ul>
+</section>
+<section id="참고문헌" class="level2">
+<h2 class="anchored" data-anchor-id="참고문헌">참고문헌</h2>
+<ul>
+<li>Rudin, <em>Functional Analysis</em>, Ch. 3</li>
+<li>Brezis, <em>Functional Analysis</em>, Ch. 1</li>
 </ul>
 
 

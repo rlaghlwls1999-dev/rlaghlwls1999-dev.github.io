@@ -4,4 +4,4 @@ title: "Study Notes"
 
 # 공부 노트
 
-아직 정리한 노트가 없습니다.
+- [Stochastic Calculus : Gaussian Processes and Spaces](Stochastic_calculus.qmd)
