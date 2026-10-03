@@ -1,5 +1,5 @@
 ---
-title: "Research Papers"
+title: "Blog"
 listing:
   contents: "*.qmd"
   sort: "date desc"

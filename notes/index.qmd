@@ -1,7 +1,9 @@
 ---
 title: "Study Notes"
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  categories: true
+  sort-ui: true
+  filter-ui: true
 ---
-
-# 공부 노트
-
-- [Stochastic Calculus : Gaussian Processes and Spaces](Stochastic_calculus.qmd)

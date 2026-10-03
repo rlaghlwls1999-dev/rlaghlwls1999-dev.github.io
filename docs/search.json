@@ -65,9 +65,9 @@
   {
     "objectID": "papers/index.html",
     "href": "papers/index.html",
-    "title": "Papers",
+    "title": "Research Papers",
     "section": "",
-    "text": "논문 정리\n아직 정리한 논문이 없습니다."
+    "text": "No matching items"
   },
   {
     "objectID": "index.html",
@@ -81,6 +81,13 @@
     "href": "notes/index.html",
     "title": "Study Notes",
     "section": "",
-    "text": "공부 노트\n\nStochastic Calculus : Gaussian Processes and Spaces"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n함수해석학: Hahn-Banach 정리\n\n\n\n함수해석학\n\n\n\n\n\n\n\n\n\nOct 3, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "No matching items"
   }
 ]
